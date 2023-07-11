@@ -1,6 +1,6 @@
+import 'package:banktestapp/core/utils/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:middle_east/core/utils/extension.dart';
 
 class MdCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MdCustomAppBar({super.key});
@@ -13,10 +13,11 @@ class MdCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         bottomRight: Radius.circular(56),
       ),
       child: AppBar(
-        toolbarHeight: 300,
+        toolbarHeight: 250,
+        leading: const SizedBox.shrink(),
         title: Column(
           children: [
-            SvgPicture.asset('images/Frame.svg'),
+            SvgPicture.asset('assets/Frame.svg'),
             const SizedBox(height: 12),
             ShaderMask(
               shaderCallback: (bounds) => const LinearGradient(
@@ -39,7 +40,7 @@ class MdCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             const SizedBox(height: 12),
             Text(
               'سوپر اپلیکیشن بانک خاورمیانه',
-              style: context.textTheme.headline2,
+              style: context.textTheme.bodyLarge!.copyWith(color: Colors.white),
             ),
           ],
         ),
@@ -48,5 +49,5 @@ class MdCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(300);
+  Size get preferredSize => const Size.fromHeight(250);
 }

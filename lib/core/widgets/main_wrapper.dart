@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../futures/screens/input_screen.dart';
+import '../../futures/hello_future/screens/input_screen.dart';
 
 class MainWrapper extends StatelessWidget {
   MainWrapper({super.key});

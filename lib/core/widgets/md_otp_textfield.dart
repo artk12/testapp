@@ -1,7 +1,9 @@
+import 'package:banktestapp/core/utils/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
-import 'package:middle_east/core/resources/color_manager.dart';
-import 'package:middle_east/core/utils/extension.dart';
+
+import '../resources/color_manager.dart';
+
 
 class MdOtpField extends StatelessWidget {
   final void Function(String value)? onSubmit;

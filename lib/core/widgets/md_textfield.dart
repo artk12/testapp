@@ -1,8 +1,8 @@
+import 'package:banktestapp/core/resources/color_manager.dart';
+import 'package:banktestapp/core/utils/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:middle_east/core/resources/color_manager.dart';
-import 'package:middle_east/core/utils/extension.dart';
 
 class MdTextFormField extends StatelessWidget {
   final String? labelText;
@@ -163,7 +163,7 @@ class _TextFieldBelowTextAnimState extends State<TextFieldBelowTextAnim>
             if (widget.isError)
               Padding(
                 padding: const EdgeInsets.only(left: 4),
-                child: SvgPicture.asset('images/error.svg'),
+                child: SvgPicture.asset('error.svg'),
               ),
             Expanded(
               child: Text(

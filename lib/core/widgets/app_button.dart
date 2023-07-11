@@ -1,6 +1,7 @@
-import 'package:buttons/widgets/buttons/primary_button.dart';
-import 'package:buttons/widgets/buttons/secondary_button.dart';
-import 'package:buttons/widgets/buttons/transparent_button.dart';
+
+import 'package:banktestapp/core/widgets/buttons/primary_button.dart';
+import 'package:banktestapp/core/widgets/buttons/secondary_button.dart';
+import 'package:banktestapp/core/widgets/buttons/transparent_button.dart';
 import 'package:flutter/material.dart';
 
 import 'buttons/info_button.dart';

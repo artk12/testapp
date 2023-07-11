@@ -1,19 +1,20 @@
 
+import 'package:banktestapp/AppTheme.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'app_router.dart';
-import 'futures/presentation/bloc/car_bloc/car_bloc.dart';
-import 'futures/screens/input_screen.dart';
+import 'futures/hello_future/presentation/bloc/car_bloc/car_bloc.dart';
+import 'futures/hello_future/screens/input_screen.dart';
 import 'locator.dart';
 
 void main() async{
   await setup();
   setPathUrlStrategy();
-  if(kIsWeb){
-    runApp(const MyApp());
-  }
+  // if(kIsWeb){
+  runApp(const MyApp());
+  // }
 }
 
 class MyApp extends StatelessWidget {
@@ -28,10 +29,10 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp.router(
         title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
+        builder: (context,child){
+          return Directionality(textDirection: TextDirection.rtl, child: child!);
+        },
+        theme: AppTheme.lightTheme,
         routerConfig: BaseAppRouter.router,
         // home: const MyHomePage(),
       ),
